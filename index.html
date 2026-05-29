@@ -255,9 +255,11 @@
       width: 186mm;
       height: 132mm;
       overflow: hidden;
-      border: 1.3mm solid rgba(74, 154, 105, 0.34);
+      /* border: 1.3mm solid rgba(74, 154, 105, 0.34); */
       border-radius: 7mm;
-      background: var(--cream);
+      /* background: var(--cream); */
+      background-image: url(https://images.pexels.com/photos/10217362/pexels-photo-10217362.jpeg);
+      background-position-y: center;
       box-shadow: var(--shadow);
       color: var(--ink);
       transform: scale(var(--effective-preview-scale));
@@ -535,7 +537,7 @@
       border-radius: 999px;
       background: var(--amber);
       color: #2f2917;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 950;
       line-height: 1.05;
       text-transform: uppercase;
@@ -862,7 +864,7 @@
       preview.product3Name.textContent = fields.product3Name.value.trim() || "Product 3";
       preview.promoPrice.textContent = promo;
       preview.regularPrice.textContent = "$" + regular;
-      preview.savings.textContent = "Save " + percentage + "% Instant";
+      preview.savings.textContent = "Save " + percentage + "% OFF";
     }
 
     function wireImageInput(inputId, imageId, wrapId) {
