@@ -852,6 +852,7 @@
       const promo = moneyValue(fields.promoPrice.value, 0);
       const regular = moneyValue(fields.regularPrice.value, 0);
       const savings = Math.max(regular - promo, 0);
+      const percentage = regular > 0 ? Math.round((savings / regular) * 100) : 0;
 
       preview.campaign.textContent = fields.campaignTitle.value.trim() || "Bundle & Save with Aura";
       preview.bundle.textContent = fields.bundleName.value;
@@ -861,7 +862,7 @@
       preview.product3Name.textContent = fields.product3Name.value.trim() || "Product 3";
       preview.promoPrice.textContent = promo;
       preview.regularPrice.textContent = "$" + regular;
-      preview.savings.textContent = "Save $" + savings + " Instant";
+      preview.savings.textContent = "Save " + percentage + "% Instant";
     }
 
     function wireImageInput(inputId, imageId, wrapId) {
